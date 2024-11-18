@@ -17,6 +17,9 @@ app.use(bodyParser.urlencoded{{extended: false}});
 
 app.get('/', userController.getAllUsers);
 
+app.get('/edit/:id', userControlers.getUserById);
+app.get("/edit/:id", userControlers.updateUser);
+
 app.listen(3000 , () => {
     console.log('Server rodando na porta 3000');
 });
