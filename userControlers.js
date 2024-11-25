@@ -32,3 +32,14 @@ exports.updateUser = (req, res) => {
         res.redirect('/');
     });
 };
+
+exports.addUser = (req, res) => {
+
+    const newUser = {
+        name: req.body.name,
+        email: req.body.name,
+    };
+    User.addUser(newUser, () => {
+        res.redirect('/');
+    });
+};

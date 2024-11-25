@@ -1,5 +1,6 @@
 
 
+const { addUser } = require('../Controlers/userControlers');
 const db = require('../DbConfig/db');
 
 const User = (
@@ -34,6 +35,13 @@ getUserById: (id, callback) => {
            
         });
 
+    },
+    addUser: (data, callback) => {
+        const sql = 'INSERT INTO users SET ?';
+        db.query(sql, data, (err, result ) => {
+            if(err) throw err;
+            callback(result);
+        });
     }
 
 
