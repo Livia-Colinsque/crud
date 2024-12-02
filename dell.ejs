@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Usuário</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <!-- Cabeçalho da página -->
+            <div class="row">
+                <h2>NODE - CRUD <span class="badge text-bg-secondary">
+                        v 2.0.0</span></h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="span10 offset1">
+        <div class="row">
+            <h3 class="well">Excluir Contato</h3>
+        </div>
+        <form class="form-horizontal" action="/dell/<%= user.id %>" method="POST">
+            <input type="hidden" name="id" id="id" value="<%= user.id %>" />
+            <div class="alert alert-danger">
+                Deseja excluir o contato?
+            </div>
+            <div class="form actions">
+                <button type="submit" class="btn btn-danger">Sim</button>
+                <a href="/" class="btn btn-primary">Voltar</a>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
